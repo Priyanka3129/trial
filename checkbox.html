@@ -1,0 +1,37 @@
+<html>
+<head>
+<body>
+ 
+<form>
+  id<input type="text" id="text1"><br>
+  password<input type="text" id="text2"><br>
+  <input type="checkbox" id="v1" name="vehicles" value="bike">bike
+  <input type="checkbox" id="v2" name="vehicles" value="car">car
+  <input type="checkbox" id="v3" name="vehicles" value="heavy">heavy
+  <input type="button" value="submit" onclick="func()" >
+  
+  <script>
+ function func()
+ {
+   var uid=document.getElementById("text1").value;
+   var pw=document.getElementById("text2").value;
+   var gen=document.getElementsByName("vehicles");
+   var gen1=[];
+   for(var i=0;i<gen.length;i++)
+   {
+    if(gen[i].checked)
+	{
+	 gen1[i]=gen[i].value;
+	}
+   }
+   for(var j=0;j<gen1.length;j++)
+   {
+     document.write(gen1[j]);
+	
+   }
+ }  
+ </script> 
+ </form>
+ </body>
+ </head>
+ </html>
